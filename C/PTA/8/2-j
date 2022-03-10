@@ -1,0 +1,67 @@
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct tree
+{
+ int Data;
+ struct tree *LeftChild;
+ struct tree *RightChild;
+} * TreeNode, *Tree;
+
+TreeNode Insert(Tree root, int element)
+{
+ if (root == NULL)
+ {
+  root = (TreeNode)malloc(sizeof(struct tree));
+  root->LeftChild = NULL;
+  root->RightChild = NULL;
+  root->Data = element;
+ }
+ else
+ {
+  if (element > root->Data)
+  {
+   root->RightChild = Insert(root->RightChild, element);
+  }
+  else if (element < root->Data)
+            {
+   root->LeftChild = Insert(root->LeftChild, element);
+  }
+ }
+ return root;
+}
+
+void PrintPreOrder(Tree root)
+{
+ printf("%d,", root->Data);
+ if (root->LeftChild != NULL)
+  PrintPreOrder(root->LeftChild);
+ if (root->RightChild != NULL)
+  PrintPreOrder(root->RightChild);
+}
+
+Tree MakeEmpty(Tree T)
+{
+    if(T!=NULL)
+    {
+        MakeEmpty(T->LeftChild);
+        MakeEmpty(T->RightChild);
+        free(T);
+    }
+    return NULL;
+}
+
+int main()
+{
+    Tree T=MakeEmpty(T);
+    int input;
+    while(scanf("%d,",&input)!=EOF)
+    {
+        T=Insert(T,input);
+    }
+    PrintPreOrder(T);
+    printf("\n");
+    T=MakeEmpty(T);
+    return 0;
+}

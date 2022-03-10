@@ -1,0 +1,35 @@
+{
+	"files.associations": {
+		"stdio.h": "c",
+		"math.h": "c",
+		"__debug": "cpp",
+		"__nullptr": "cpp",
+		"algorithm": "cpp",
+		"complex": "cpp",
+		"exception": "cpp",
+		"type_traits": "cpp",
+		"utility": "cpp",
+		"functional": "cpp",
+		"iterator": "cpp",
+		"limits": "cpp",
+		"memory": "cpp",
+		"string": "cpp"
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
+
+	"java.errors.incompleteClasspath.severity": "ignore",
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home",
+    "java.configuration.maven.userSettings": "/Library/Maven/apache-maven-3.6.1/conf/settings.xml",
+    "maven.executable.path": "/Library/Maven/apache-maven-3.6.1/bin/mvn",
+    "maven.terminal.useJavaHome": true,
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home"
+        }
+    ],
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+}

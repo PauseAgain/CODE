@@ -1,0 +1,42 @@
+{
+    // One of the key features of Visual Studio Code is its great debugging support.
+    // VS Code's built-in debugger helps accelerate your edit, compile and debug loop.
+    // VS Code keeps debugging configuration information in a launch.json file
+    // located in a .vscode folder in your workspace (project root folder).
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Launch ConstantDemo",
+        "request": "launch",
+        "mainClass": "Java.第三章.ConstantDemo",
+        "projectName": "CODE_a9f54df3"
+      },
+      {
+        "type": "java",
+        "name": "Debug (Launch)",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "sourcePaths": [
+          "${workspaceRoot}/src/my/package"
+        ],
+        "console": "integratedTerminal",
+        "stopOnEntry": false,
+        "mainClass": "hello",
+        "args": ""
+      },
+      {
+        "type": "cppdbg",
+        "request": "launch",
+        "name": "C++ Debug",
+        "preLaunchTask": "g++ compile",
+        "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+        "args": [],
+        "environment": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "externalConsole": true,
+        "MIMode": "lldb"
+      }
+    ]
+  }
